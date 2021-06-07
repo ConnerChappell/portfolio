@@ -1,15 +1,15 @@
 /////////////////////////////////////////
 /*  Base Styles  */
 html {
-    font-family: 'Nunito Sans', Helvetica, sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
-// Background photo created by rawpixel.com
 
 /////////////////////////////////////////
 /*  Nav  */
 .navbar {
     border-bottom: 1px solid $primary-accent;
     padding: 1rem 5rem;
+    font-weight: 400;
 
     .container-fluid {
         padding: 0;
@@ -62,4 +62,22 @@ main {
     max-width: 1200px;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////
+/*  Media Queries  */
+@media screen and (max-width: 767px) {
+    .navbar a.nav-link {
+        margin-left: 0;
+        text-align: center;
+    }
 }
