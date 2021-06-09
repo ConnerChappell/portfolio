@@ -47,56 +47,177 @@ table {
 
 /*  Base Styles  */
 html {
-  font-family: 'Open Sans', Helvetica, sans-serif; }
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #fff; }
+
+body {
+  color: #3e3e3e; }
 
 /*  Nav  */
-.navbar {
-  border-bottom: 1px solid #3e3e3e;
-  padding: 1rem 5rem;
-  font-weight: 400;
-  /* Link Border Animation Start */
-  /* Link Border Animation End */ }
-  .navbar .container-fluid {
-    padding: 0; }
-  .navbar .navbar-brand {
-    color: #3e3e3e;
-    font-size: 1.25rem;
-    padding: .5rem 0;
-    margin: 0; }
-  .navbar .navbar-toggler-icon {
-    border-color: #3e3e3e;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .navbar .navbar-toggler-icon .fa-bars {
+.navbarContainer {
+  width: 100%;
+  border-bottom: 1px solid #3e3e3e; }
+  .navbarContainer .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    font-weight: 400; }
+    .navbarContainer .navbar .container-fluid {
+      padding: 0; }
+    .navbarContainer .navbar .navbar-brand {
       color: #3e3e3e;
-      font-size: 1.5rem; }
-  .navbar a.nav-link {
-    color: #3e3e3e;
-    font-size: 1.25rem;
-    padding: .5rem 0.25rem !important;
-    margin-left: 1.5rem; }
-  .navbar .animatedBorder {
-    position: relative; }
-  .navbar .animatedBorder:after {
-    content: '';
-    position: absolute;
-    border-bottom: 1px solid #3e3e3e;
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    transition: all .5s; }
-  .navbar .animatedBorder:hover:after {
-    right: 0; }
+      font-size: 1.25rem;
+      padding: .5rem 0;
+      margin: 0; }
+    .navbarContainer .navbar .navbar-toggler-icon {
+      border-color: #3e3e3e;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .navbarContainer .navbar .navbar-toggler-icon .fa-bars {
+        color: #3e3e3e;
+        font-size: 1.5rem; }
+    .navbarContainer .navbar a.nav-link {
+      color: #3e3e3e;
+      font-size: 1.25rem;
+      padding: .5rem 0.25rem !important;
+      margin-left: 1.5rem; }
+    .navbarContainer .navbar .animatedBorder {
+      position: relative; }
+    .navbarContainer .navbar .animatedBorder:after {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid #3e3e3e;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      transition: all .5s; }
+    .navbarContainer .navbar .animatedBorder:hover:after {
+      right: 0; }
 
 /*  Main  */
 main {
   max-width: 1200px;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000; }
+  margin: 0 auto; }
+  main #landingAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem; }
+    main #landingAbout .morphing {
+      width: 100%;
+      font-size: 120px;
+      font-weight: 700; }
+      main #landingAbout .morphing .word {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: word 12s infinite ease-in-out; }
+        main #landingAbout .morphing .word:nth-child(1) {
+          animation-delay: -12s; }
+        main #landingAbout .morphing .word:nth-child(2) {
+          animation-delay: -9.6s; }
+        main #landingAbout .morphing .word:nth-child(3) {
+          animation-delay: -7.2s; }
+        main #landingAbout .morphing .word:nth-child(4) {
+          animation-delay: -4.8s; }
+@keyframes word {
+  0%, 5%, 100% {
+    filter: blur(0px);
+    opacity: 1; }
+  20%, 80% {
+    filter: blur(1em);
+    opacity: 0; } }
+    main #landingAbout .landingAboutDescription {
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 100px; }
+    main #landingAbout .scrollIcon {
+      position: absolute;
+      height: 75px;
+      width: auto;
+      bottom: 10rem; }
 
 /*  Media Queries  */
 @media screen and (max-width: 767px) {
   .navbar a.nav-link {
     margin-left: 0;
     text-align: center; } }
+@media screen and (min-width: 320px) {
+  main #landingAbout .morphing {
+    font-size: 3rem; }
+    main #landingAbout .morphing .word {
+      top: 62.5%;
+      left: 50%;
+      transform: translate(-50%, -62.5%); }
+  main #landingAbout .landingAboutDescription {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+  main #landingAbout .scrollIcon {
+    bottom: 5rem; } }
+@media screen and (min-width: 375px) {
+  main #landingAbout .morphing {
+    font-size: 4rem; }
+    main #landingAbout .morphing .word {
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -65%); }
+  main #landingAbout .landingAboutDescription {
+    font-size: 3rem;
+    line-height: 3.5rem; }
+  main #landingAbout .scrollIcon {
+    bottom: 4.5rem; } }
+@media screen and (min-width: 375px) and (min-height: 812px) {
+  main #landingAbout .landingAboutDescription {
+    font-size: 3.5rem;
+    line-height: 4rem; }
+  main #landingAbout .scrollIcon {
+    bottom: 6rem; } }
+@media screen and (min-width: 414px) {
+  main #landingAbout .morphing {
+    font-size: 4.5rem; }
+  main #landingAbout .landingAboutDescription {
+    font-size: 3.5rem;
+    line-height: 4rem; } }
+@media screen and (min-width: 768px) {
+  main #landingAbout .morphing {
+    font-size: 7rem; }
+    main #landingAbout .morphing .word {
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -70%); }
+  main #landingAbout .landingAboutDescription {
+    font-size: 6.5rem;
+    line-height: 7rem; }
+  main #landingAbout .scrollIcon {
+    bottom: 6rem; } }
+@media screen and (min-width: 1024px) and (min-height: 1366px) {
+  main #landingAbout .morphing {
+    font-size: 9rem; }
+    main #landingAbout .morphing .word {
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -70%); }
+  main #landingAbout .landingAboutDescription {
+    font-size: 9rem;
+    line-height: 10rem; }
+  main #landingAbout .scrollIcon {
+    bottom: 9rem; } }
+@media screen and (min-width: 1200px) {
+  main {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000; }
+    main #landingAbout .morphing {
+      font-size: 120px; }
+      main #landingAbout .morphing .word {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    main #landingAbout .landingAboutDescription {
+      font-size: 80px;
+      line-height: 100px; }
+    main #landingAbout .scrollIcon {
+      bottom: 10rem; } }
