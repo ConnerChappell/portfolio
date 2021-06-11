@@ -1,12 +1,18 @@
 /////////////////////////////////////////
 /*  Base Styles  */
 html {
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-family: $primary-font;
     font-size: 16px;
     background-color: $primary-color;
 }
 body {
     color: $primary-accent;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $primary-accent;
+    padding: 1rem;
 }
 
 /////////////////////////////////////////
@@ -73,6 +79,17 @@ body {
 main {
     max-width: 1200px;
     margin: 0 auto;
+
+    // Divider Section
+    .dividerSection {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 7rem 0;
+
+        img {
+            height: 150px;
+        }
+    }
 
     // About Section
     #landingAbout {
