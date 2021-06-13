@@ -4,6 +4,7 @@ html {
     font-family: $primary-font;
     font-size: 16px;
     background-color: $primary-color;
+    scroll-behavior: smooth;
 }
 body {
     color: $primary-accent;
@@ -12,7 +13,11 @@ h1 {
     font-size: 4rem;
     font-weight: 700;
     color: $primary-accent;
-    padding: 1rem;
+}
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: all .4s;
 }
 
 /////////////////////////////////////////
@@ -84,7 +89,7 @@ main {
     .dividerSection {
         display: flex;
         justify-content: center;
-        padding: 0 0 7rem 0;
+        margin: 0 0 9rem 0;
 
         img {
             height: 150px;
@@ -137,13 +142,80 @@ main {
         }
     }
 
+    // Projects Section
+    #projectsSection {
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 7rem;
+
+        h1 {
+            padding-bottom: 2rem;
+        }
+        .projectsContainer {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                width: 48%;
+            }
+            .projectCard {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 350px;
+                // width: 50%;
+                background-color: $primary-accent;
+                color: $primary-color;
+                padding: 1.5rem;
+                transition: all .4s;
+
+                img {
+                    height: 70%;
+                }
+                .cardInfoTop {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    h3 {
+                        font-weight: 600;
+                    }
+                    a:hover {
+                        color: $primary-color;
+                        transform: scale(1.3);
+                    }
+                    i {
+                        font-size: 1.6rem;
+                    }
+                }
+                .cardInfoBottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    p {
+                        font-size: .75rem;
+                        font-weight: 600;
+                    }
+                    a:hover {
+                        color: #000;
+                    }
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .projectCard:hover {
+                transform: scale(.98);
+            }
+        }
+    }
+
 
 
 }
-
-
-
-
 
 
 
@@ -154,7 +226,7 @@ main {
 /*  Media Queries  */
 @media screen and (max-width: 767px) {
     .navbar a.nav-link {
-        margin-left: 0;
+        margin-left: 0 !important;
         text-align: center;
     }
 }
@@ -177,6 +249,12 @@ main {
             }
             .scrollIcon {
                 bottom: 5rem;
+            }
+        }
+        .projectsContainer {
+            a {
+                padding: 1rem 0;
+                width: 100% !important;
             }
         }
     }
@@ -253,6 +331,11 @@ main {
             }
             .scrollIcon {
                 bottom: 6rem;
+            }
+        }
+        .projectsContainer {
+            a {
+                width: 48% !important;
             }
         }
     }
