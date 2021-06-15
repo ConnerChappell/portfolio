@@ -89,7 +89,7 @@ main {
     .dividerSection {
         display: flex;
         justify-content: center;
-        margin: 0 0 9rem 0;
+        margin: 0 0 10rem 0;
 
         img {
             height: 150px;
@@ -158,7 +158,7 @@ main {
             justify-content: space-between;
 
             a {
-                width: 48%;
+                width: 48.5%;
             }
             .projectCard {
                 display: flex;
@@ -335,7 +335,7 @@ main {
         }
         .projectsContainer {
             a {
-                width: 48% !important;
+                width: 48.5% !important;
             }
         }
     }
@@ -344,7 +344,8 @@ main {
 @media screen and (min-width: 1024px) and (min-height: 1366px) {
     main {
         #landingAbout {
-            
+            height: 90vh !important;
+
             .morphing {
                 font-size: 9rem;
 

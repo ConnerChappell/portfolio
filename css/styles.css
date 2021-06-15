@@ -114,7 +114,7 @@ main {
   main .dividerSection {
     display: flex;
     justify-content: center;
-    margin: 0 0 9rem 0; }
+    margin: 0 0 10rem 0; }
     main .dividerSection img {
       height: 150px; }
   main #landingAbout {
@@ -169,7 +169,7 @@ main {
       flex-wrap: wrap;
       justify-content: space-between; }
       main #projectsSection .projectsContainer a {
-        width: 48%; }
+        width: 48.5%; }
       main #projectsSection .projectsContainer .projectCard {
         display: flex;
         flex-direction: column;
@@ -263,19 +263,21 @@ main {
   main #landingAbout .scrollIcon {
     bottom: 6rem; }
   main .projectsContainer a {
-    width: 48% !important; } }
+    width: 48.5% !important; } }
 @media screen and (min-width: 1024px) and (min-height: 1366px) {
-  main #landingAbout .morphing {
-    font-size: 9rem; }
-    main #landingAbout .morphing .word {
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -70%); }
-  main #landingAbout .landingAboutDescription {
-    font-size: 9rem;
-    line-height: 10rem; }
-  main #landingAbout .scrollIcon {
-    bottom: 9rem; } }
+  main #landingAbout {
+    height: 90vh !important; }
+    main #landingAbout .morphing {
+      font-size: 9rem; }
+      main #landingAbout .morphing .word {
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%); }
+    main #landingAbout .landingAboutDescription {
+      font-size: 9rem;
+      line-height: 10rem; }
+    main #landingAbout .scrollIcon {
+      bottom: 9rem; } }
 @media screen and (min-width: 1200px) {
   main {
     border-left: 1px solid #000;
