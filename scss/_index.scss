@@ -19,6 +19,27 @@ a {
     text-decoration: none;
     transition: all .4s;
 }
+a.inlineLink {
+    color: $primary-accent;
+    text-decoration: underline;
+}
+// Link Border Animation Start
+.animatedBorder {
+    position: relative;
+}
+.animatedBorder:after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid $primary-accent;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    transition: all .5s;
+}
+.animatedBorder:hover:after {
+    right: 0;
+}
+// Link Border Animation End
 
 /////////////////////////////////////////
 /*  Nav  */
@@ -58,23 +79,6 @@ a {
             padding: .5rem 0.25rem !important;
             margin-left: 1.5rem;
         }
-        // Link Border Animation Start
-        .animatedBorder {
-            position: relative;
-        }
-        .animatedBorder:after {
-            content: '';
-            position: absolute;
-            border-bottom: 1px solid $primary-accent;
-            bottom: 0;
-            left: 0;
-            right: 100%;
-            transition: all .5s;
-        }
-        .animatedBorder:hover:after {
-            right: 0;
-        }
-        // Link Border Animation End
     }
 }
 
@@ -146,10 +150,16 @@ main {
     #projectsSection {
         width: 100%;
         padding: 0 1rem;
-        margin-bottom: 7rem;
+        margin-bottom: 10rem;
 
         h1 {
             padding-bottom: 2rem;
+        }
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1.5rem 0 0 0;
+            line-height: 2rem;
         }
         .projectsContainer {
             width: 100%;
@@ -212,12 +222,48 @@ main {
             }
         }
     }
-
-
-
 }
 
 
+/////////////////////////////////////////
+/*  Footer/Contact  */
+.footerContainer {
+    width: 100%;
+    border-top: 1px solid $primary-accent;
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+
+        .backToTop {
+            display: flex;
+            justify-content: space-between;
+            color: $primary-accent;
+
+            p {
+                padding-left: .5rem;
+            }
+        }
+        .contactLinks {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            
+            a {
+                color: $primary-accent;
+                font-size: 2rem;
+                padding-left: .9rem;
+            }
+            a:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
 
 
 
@@ -311,6 +357,30 @@ main {
             }
         }
     }
+    .footerContainer {
+
+        footer {
+            flex-direction: column;
+
+            .backToTop {
+                padding: 2rem 1rem 1rem 1rem;
+
+                p {
+                    padding-left: .5rem;
+                }
+            }
+            .contactLinks {
+                display: flex;
+                justify-content: space-between;
+                
+                a {
+                    color: $primary-accent;
+                    font-size: 3rem;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -336,6 +406,25 @@ main {
         .projectsContainer {
             a {
                 width: 48.5% !important;
+            }
+        }
+    }
+    .footerContainer {
+
+        footer {
+            flex-direction: row;
+            align-items: center;
+
+            .backToTop {
+                padding: 0 0 .5rem 0;
+                margin-left: 1rem;
+            }
+            .contactLinks {
+                
+                a {
+                    font-size: 2rem;
+                    padding: 0 0 0 .9rem;
+                }
             }
         }
     }

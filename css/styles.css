@@ -65,6 +65,25 @@ a {
   text-decoration: none;
   transition: all .4s; }
 
+a.inlineLink {
+  color: #3e3e3e;
+  text-decoration: underline; }
+
+.animatedBorder {
+  position: relative; }
+
+.animatedBorder:after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #3e3e3e;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  transition: all .5s; }
+
+.animatedBorder:hover:after {
+  right: 0; }
+
 /*  Nav  */
 .navbarContainer {
   width: 100%;
@@ -94,18 +113,6 @@ a {
       font-size: 1.25rem;
       padding: .5rem 0.25rem !important;
       margin-left: 1.5rem; }
-    .navbarContainer .navbar .animatedBorder {
-      position: relative; }
-    .navbarContainer .navbar .animatedBorder:after {
-      content: '';
-      position: absolute;
-      border-bottom: 1px solid #3e3e3e;
-      bottom: 0;
-      left: 0;
-      right: 100%;
-      transition: all .5s; }
-    .navbarContainer .navbar .animatedBorder:hover:after {
-      right: 0; }
 
 /*  Main  */
 main {
@@ -160,9 +167,14 @@ main {
   main #projectsSection {
     width: 100%;
     padding: 0 1rem;
-    margin-bottom: 7rem; }
+    margin-bottom: 10rem; }
     main #projectsSection h1 {
       padding-bottom: 2rem; }
+    main #projectsSection p {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1.5rem 0 0 0;
+      line-height: 2rem; }
     main #projectsSection .projectsContainer {
       width: 100%;
       display: flex;
@@ -205,6 +217,34 @@ main {
             font-size: 2rem; }
       main #projectsSection .projectsContainer .projectCard:hover {
         transform: scale(0.98); }
+
+/*  Footer/Contact  */
+.footerContainer {
+  width: 100%;
+  border-top: 1px solid #3e3e3e; }
+  .footerContainer footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem; }
+    .footerContainer footer .backToTop {
+      display: flex;
+      justify-content: space-between;
+      color: #3e3e3e; }
+      .footerContainer footer .backToTop p {
+        padding-left: .5rem; }
+    .footerContainer footer .contactLinks {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5rem; }
+      .footerContainer footer .contactLinks a {
+        color: #3e3e3e;
+        font-size: 2rem;
+        padding-left: .9rem; }
+      .footerContainer footer .contactLinks a:hover {
+        transform: scale(1.1); }
 
 /*  Media Queries  */
 @media screen and (max-width: 767px) {
@@ -249,7 +289,21 @@ main {
     font-size: 4.5rem; }
   main #landingAbout .landingAboutDescription {
     font-size: 3.5rem;
-    line-height: 4rem; } }
+    line-height: 4rem; }
+
+  .footerContainer footer {
+    flex-direction: column; }
+    .footerContainer footer .backToTop {
+      padding: 2rem 1rem 1rem 1rem; }
+      .footerContainer footer .backToTop p {
+        padding-left: .5rem; }
+    .footerContainer footer .contactLinks {
+      display: flex;
+      justify-content: space-between; }
+      .footerContainer footer .contactLinks a {
+        color: #3e3e3e;
+        font-size: 3rem;
+        padding: 1rem; } }
 @media screen and (min-width: 768px) {
   main #landingAbout .morphing {
     font-size: 7rem; }
@@ -263,7 +317,17 @@ main {
   main #landingAbout .scrollIcon {
     bottom: 6rem; }
   main .projectsContainer a {
-    width: 48.5% !important; } }
+    width: 48.5% !important; }
+
+  .footerContainer footer {
+    flex-direction: row;
+    align-items: center; }
+    .footerContainer footer .backToTop {
+      padding: 0 0 .5rem 0;
+      margin-left: 1rem; }
+    .footerContainer footer .contactLinks a {
+      font-size: 2rem;
+      padding: 0 0 0 .9rem; } }
 @media screen and (min-width: 1024px) and (min-height: 1366px) {
   main #landingAbout {
     height: 90vh !important; }
