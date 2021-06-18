@@ -53,8 +53,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  color: #3e3e3e;
-  overflow-x: hidden; }
+  color: #3e3e3e; }
 
 h1 {
   font-size: 4rem;
@@ -176,7 +175,7 @@ main {
     padding: 0 1rem;
     margin-bottom: 10rem; }
     main #projectsSection h1 {
-      padding-bottom: 2rem; }
+      margin-bottom: 2rem; }
     main #projectsSection p {
       font-size: 1.5rem;
       text-align: center;
@@ -226,6 +225,8 @@ main {
         transform: scale(0.98); }
   main #aboutMeSection {
     padding: 1rem; }
+    main #aboutMeSection h1 {
+      margin: 1rem 0 .5rem 0; }
     main #aboutMeSection .aboutMeDescription {
       display: flex;
       flex-direction: column;
@@ -394,17 +395,14 @@ main {
     main #landingAbout .scrollIcon {
       bottom: 9rem; } }
 @media screen and (min-width: 1200px) {
-  main {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000; }
-    main #landingAbout .morphing {
-      font-size: 120px; }
-      main #landingAbout .morphing .word {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-    main #landingAbout .landingAboutDescription {
-      font-size: 80px;
-      line-height: 100px; }
-    main #landingAbout .scrollIcon {
-      bottom: 10rem; } }
+  main #landingAbout .morphing {
+    font-size: 120px; }
+    main #landingAbout .morphing .word {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  main #landingAbout .landingAboutDescription {
+    font-size: 80px;
+    line-height: 100px; }
+  main #landingAbout .scrollIcon {
+    bottom: 10rem; } }
