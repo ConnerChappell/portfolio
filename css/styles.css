@@ -53,10 +53,16 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  color: #3e3e3e; }
+  color: #3e3e3e;
+  overflow-x: hidden; }
 
 h1 {
   font-size: 4rem;
+  font-weight: 700;
+  color: #3e3e3e; }
+
+h2 {
+  font-size: 2rem;
   font-weight: 700;
   color: #3e3e3e; }
 
@@ -217,6 +223,36 @@ main {
             font-size: 2rem; }
       main #projectsSection .projectsContainer .projectCard:hover {
         transform: scale(0.98); }
+  main #aboutMeSection {
+    padding: 1rem; }
+    main #aboutMeSection .aboutMeDescription {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      margin-bottom: 10rem; }
+      main #aboutMeSection .aboutMeDescription p {
+        margin: 1.5rem 0; }
+      main #aboutMeSection .aboutMeDescription a {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 .25rem .5rem .25rem;
+        color: #3e3e3e; }
+        main #aboutMeSection .aboutMeDescription a p {
+          padding-left: .5rem;
+          margin: 0; }
+  main #skillsSection {
+    padding: 1rem; }
+    main #skillsSection h2 {
+      padding-bottom: 2rem; }
+    main #skillsSection .skills ul {
+      display: flex;
+      flex-wrap: wrap; }
+      main #skillsSection .skills ul li {
+        font-size: 1.5rem;
+        margin: 0 2rem 2rem 0; }
 
 /*  Footer/Contact  */
 .footerContainer {
@@ -250,7 +286,20 @@ main {
 @media screen and (max-width: 767px) {
   .navbar a.nav-link {
     margin-left: 0 !important;
-    text-align: center; } }
+    text-align: center; }
+
+  #aboutMeSection .aboutMeDescription a p {
+    font-size: 1.25rem; }
+
+  .footerContainer footer {
+    flex-direction: column;
+    align-items: center; }
+    .footerContainer footer .backToTop {
+      margin: 2rem 0;
+      font-size: 1.5rem; }
+    .footerContainer footer .contactLinks a {
+      font-size: 3rem;
+      padding: 0 .9rem 0 .9rem; } }
 @media screen and (min-width: 320px) {
   main #landingAbout .morphing {
     font-size: 3rem; }
@@ -294,7 +343,8 @@ main {
   .footerContainer footer {
     flex-direction: column; }
     .footerContainer footer .backToTop {
-      padding: 2rem 1rem 1rem 1rem; }
+      padding: 2rem 1rem 1rem 1rem;
+      margin: 0; }
       .footerContainer footer .backToTop p {
         padding-left: .5rem; }
     .footerContainer footer .contactLinks {

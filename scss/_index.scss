@@ -8,9 +8,15 @@ html {
 }
 body {
     color: $primary-accent;
+    overflow-x: hidden;
 }
 h1 {
     font-size: 4rem;
+    font-weight: 700;
+    color: $primary-accent;
+}
+h2 {
+    font-size: 2rem;
     font-weight: 700;
     color: $primary-accent;
 }
@@ -40,6 +46,7 @@ a.inlineLink {
     right: 0;
 }
 // Link Border Animation End
+
 
 /////////////////////////////////////////
 /*  Nav  */
@@ -222,6 +229,58 @@ main {
             }
         }
     }
+
+    // About Me Page
+    #aboutMeSection {
+        padding: 1rem;
+        // min-height: 100vh;
+
+        .aboutMeDescription {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            margin-bottom: 10rem;
+
+            p {
+                margin: 1.5rem 0;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                padding: 0 .25rem .5rem .25rem;
+                color: $primary-accent;
+
+                p {
+                    padding-left: .5rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    // Skills Section
+    #skillsSection {
+        padding: 1rem;
+
+        h2{
+            padding-bottom: 2rem;
+        }
+        .skills {
+            
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    font-size: 1.5rem;
+                    margin: 0 2rem 2rem 0;
+                }
+            }
+        }
+    }
 }
 
 
@@ -274,6 +333,34 @@ main {
     .navbar a.nav-link {
         margin-left: 0 !important;
         text-align: center;
+    }
+    #aboutMeSection {
+        .aboutMeDescription {
+            a {
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+    .footerContainer {
+
+        footer {
+            flex-direction: column;
+            align-items: center;
+
+            .backToTop {
+                margin: 2rem 0;
+                font-size: 1.5rem;
+            }
+            .contactLinks {
+                
+                a {
+                    font-size: 3rem;
+                    padding: 0 .9rem 0 .9rem;
+                }
+            }
+        }
     }
 }
 
@@ -364,6 +451,7 @@ main {
 
             .backToTop {
                 padding: 2rem 1rem 1rem 1rem;
+                margin: 0;
 
                 p {
                     padding-left: .5rem;
