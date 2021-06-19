@@ -3,21 +3,21 @@
 html {
     font-family: $primary-font;
     font-size: 16px;
-    background-color: $primary-color;
     scroll-behavior: smooth;
 }
 body {
+    background-color: $primary-color;
     color: $primary-accent;
 }
 h1 {
     font-size: 4rem;
     font-weight: 700;
-    color: $primary-accent;
+    color: $secondary-accent;
 }
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: $primary-accent;
+    color: $secondary-accent;
 }
 a {
     color: $primary-color;
@@ -28,6 +28,9 @@ a.inlineLink {
     color: $primary-accent;
     text-decoration: underline;
 }
+a.inlineLink:hover {
+    color: $secondary-accent;
+}
 // Link Border Animation Start
 .animatedBorder {
     position: relative;
@@ -35,7 +38,7 @@ a.inlineLink {
 .animatedBorder:after {
     content: '';
     position: absolute;
-    border-bottom: 1px solid $primary-accent;
+    border-bottom: 1px solid $secondary-accent;
     bottom: 0;
     left: 0;
     right: 100%;
@@ -56,7 +59,7 @@ a.inlineLink {
     .navbar {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 1rem 1rem;
+        padding: 1rem;
         font-weight: 400;
     
         .container-fluid {
@@ -113,12 +116,14 @@ main {
         align-items: center;
         height: 100vh;
         padding: 1rem;
+        color: $primary-accent;
 
         .morphing {
             // position: relative;
             width: 100%;
             font-size: 120px;
             font-weight: 700;
+            color: $secondary-accent;
 
             $speed: 12s;
             $wordCount: 4;
@@ -164,7 +169,7 @@ main {
         p {
             font-size: 1.5rem;
             text-align: center;
-            padding: 1.5rem 0 0 0;
+            // padding: 1.5rem 0 0 0;
             line-height: 2rem;
         }
         .projectsContainer {
@@ -185,6 +190,7 @@ main {
                 background-color: $primary-accent;
                 color: $primary-color;
                 padding: 1.5rem;
+                border-radius: 6px;
                 transition: all .4s;
 
                 img {
@@ -193,13 +199,12 @@ main {
                 .cardInfoTop {
                     display: flex;
                     justify-content: space-between;
-                    align-items: flex-start;
+                    align-items: center;
 
                     h3 {
                         font-weight: 600;
                     }
                     a:hover {
-                        color: $primary-color;
                         transform: scale(1.3);
                     }
                     i {
@@ -209,14 +214,17 @@ main {
                 .cardInfoBottom {
                     display: flex;
                     justify-content: space-between;
-                    align-items: flex-end;
+                    align-items: center;
 
                     p {
                         font-size: .75rem;
                         font-weight: 600;
                     }
+                    a {
+                        color: $primary-color;
+                    }
                     a:hover {
-                        color: #000;
+                        color: $secondary-accent;
                     }
                     i {
                         font-size: 2rem;
@@ -266,6 +274,7 @@ main {
     // Skills Section
     #skillsSection {
         padding: 1rem;
+        margin-bottom: 10rem;
 
         h2{
             padding-bottom: 2rem;
@@ -321,6 +330,7 @@ main {
             }
             a:hover {
                 transform: scale(1.1);
+                color: $secondary-accent;
             }
         }
     }
