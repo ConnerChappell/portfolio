@@ -167,6 +167,9 @@ main {
     filter: blur(1em);
     opacity: 0; } }
     main #landingAbout .landingAboutDescription {
+      z-index: 99;
+      background-color: #e8eae3;
+      padding-bottom: 2rem;
       font-size: 80px;
       font-weight: 400;
       line-height: 100px; }
